@@ -1,0 +1,32 @@
+@use '../abstracts/' as abs;
+
+:where(p) {
+    font-size: abs.$font-size;
+}
+
+:where(h1, h2, p) {
+    font-family: abs.$dm-sans;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer-container {
+    @include abs.flex(center, center, row);
+    background-color: abs.$background-color;
+    min-height: 100vh;
+}
+
+.chart-main-container {
+    @include abs.centerContainer(min(90%, 350px));
+    
+    .chart-data-container {
+        background-color: abs.$background-and-text-color;
+        border-radius: .5em;
+        margin-top: 1em;
+        padding: 1.75em;
+    }
+}

@@ -1,0 +1,175 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
+  \**************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap);
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss (1) ***!
+  \******************************************************************************************************************/
+.balance-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 0.75em;
+  padding: 1em;
+}
+.balance-container .balance-text-container {
+  color: hsl(33deg, 100%, 98%);
+}
+.balance-container .balance-text-container > p:first-of-type {
+  font-size: 12px;
+  margin-top: 0.25em;
+}
+.balance-container .balance-text-container p:last-of-type {
+  line-height: 1.6;
+}
+.balance-container .balance-text-container p > strong {
+  font-size: 18px;
+}
+.balance-container > img {
+  max-width: 100%;
+  transform: scale(0.75);
+}
+
+:where(p) {
+  font-size: 18px;
+}
+
+:where(h1, h2, p) {
+  font-family: "DM Sans", sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: hsl(27deg, 66%, 92%);
+  min-height: 100vh;
+}
+
+.chart-main-container {
+  margin: 0 auto;
+  width: min(90%, 350px);
+}
+.chart-main-container .chart-data-container {
+  background-color: hsl(33deg, 100%, 98%);
+  border-radius: 0.5em;
+  margin-top: 1em;
+  padding: 1.75em;
+}
+
+.bar-chart-container {
+  margin-bottom: 1em;
+}
+.bar-chart-container > h1 {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 22px;
+}
+.bar-chart-container .chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  border-bottom: 1px solid hsl(27deg, 66%, 92%);
+}
+.bar-chart-container .chart-container .bar-container {
+  margin-block: 3em;
+  position: relative;
+}
+.bar-chart-container .chart-container .bar-container .bar {
+  animation: animate_bar 800ms ease-out;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 0.25em;
+  cursor: pointer;
+  min-width: 2em;
+}
+.bar-chart-container .chart-container .bar-container .bar[highest] {
+  background-color: hsl(186deg, 34%, 60%);
+}
+@keyframes animate_bar {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+.bar-chart-container .chart-container .bar-container > p {
+  position: absolute;
+  font-size: 14px;
+}
+.bar-chart-container .chart-container .bar-container .data {
+  background-color: hsl(25deg, 47%, 15%);
+  bottom: 100%;
+  border-radius: 0.25em;
+  color: hsl(33deg, 100%, 98%);
+  transform: translateX(-50%);
+  left: 50%;
+  margin-bottom: 0;
+  padding: 0.45em;
+  opacity: 0;
+  transition: all 350ms ease;
+}
+.bar-chart-container .chart-container .bar-container .data[open] {
+  margin-bottom: 0.35em;
+  opacity: 1;
+}
+.bar-chart-container .chart-container .bar-container .day {
+  color: hsl(28deg, 10%, 53%);
+  margin-top: 0.5em;
+}
+
+@media (max-width: 374px) {
+  .bar {
+    min-width: 1.5em !important;
+  }
+}
+.computation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.computation-container .computation-total-container > p {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 12px;
+}
+.computation-container .computation-total-container > h2 {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 32px;
+  line-height: 1.4;
+}
+.computation-container .computation-last-container {
+  margin-top: 0.5em;
+}
+.computation-container .computation-last-container > p {
+  font-size: 12px;
+  text-align: end;
+  line-height: 1.4;
+}
+.computation-container .computation-last-container > p:first-of-type {
+  color: hsl(25deg, 47%, 15%);
+}
+.computation-container .computation-last-container > p:last-of-type {
+  color: hsl(28deg, 10%, 53%);
+}
+
+/*# sourceMappingURL=style.css.map*/

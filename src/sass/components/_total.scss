@@ -1,0 +1,36 @@
+@use '../abstracts/' as abs;
+
+.computation-container {
+    @include abs.flex(space-between, center);
+
+    .computation-total-container {
+        & > p {
+            color: abs.$paragraph-text-color;
+            font-size: 12px;
+        }
+
+        & > h2 {
+            color: abs.$header-text-color;
+            font-size: 32px;
+            line-height: 1.4;
+        }
+    }
+
+    .computation-last-container {
+        margin-top: .5em;
+
+        & > p {
+            font-size: 12px;
+            text-align: end;
+            line-height: 1.4;
+        }
+
+        & > p:first-of-type {
+            color: abs.$header-text-color;
+        }
+
+        & > p:last-of-type {
+            color: abs.$paragraph-text-color;
+        }
+    }
+}

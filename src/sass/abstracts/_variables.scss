@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$dm-sans: 'DM Sans', sans-serif;
+$dm-sans-weight: (
+    regular: 400,
+    bold: 700
+);
+$dm-sans-regular: map-get($dm-sans-weight, regular);
+$dm-sans-bold: map-get($dm-sans-weight, bold);
+
+$primary-color:hsl(10, 79%, 65%);
+$highlight-bar-color: hsl(186, 34%, 60%);
+
+$header-text-color: hsl(25, 47%, 15%);
+$paragraph-text-color: hsl(28, 10%, 53%);
+$background-color: hsl(27, 66%, 92%);
+$background-and-text-color: hsl(33, 100%, 98%);
+
+$font-size: 18px;

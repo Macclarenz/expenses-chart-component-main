@@ -1,0 +1,76 @@
+@use '../abstracts/'as abs;
+
+.bar-chart-container {
+    margin-bottom: 1em;
+    
+    &>h1 {
+        color: abs.$header-text-color;
+        font-size: 22px;
+    }
+
+    .chart-container {
+        @include abs.flex(space-between, flex-end, row, nowrap, .5em);
+        border-bottom: 1px solid abs.$background-color;
+
+        .bar-container {
+            margin-block: 3em;
+            position: relative;
+
+            .bar {
+                animation: animate_bar 800ms ease-out;
+                background-color: abs.$primary-color;
+                border-radius: .25em;
+                cursor: pointer;
+                min-width: 2em;
+
+                &[highest] {
+                    background-color: abs.$highlight-bar-color;
+                }
+
+                @keyframes animate_bar {
+                    from {
+                        transform: scaleY(0);
+                        transform-origin: bottom;
+                    } to {
+                        transform: scaleY(1);
+                        transform-origin: bottom;
+                    }
+                }
+            }
+
+            &>p {
+                position: absolute;
+                font-size: 14px;
+            }
+
+            .data {
+                background-color: abs.$header-text-color;
+                bottom: 100%;
+                border-radius: .25em;
+                color: abs.$background-and-text-color;
+                transform: translateX(-50%);
+                left: 50%;
+                margin-bottom: 0;
+                padding: 0.45em;
+                opacity: 0;
+                transition: all 350ms ease;
+
+                &[open] {
+                    margin-bottom: .35em;
+                    opacity: 1;
+                }
+            }
+
+            .day {
+                color: abs.$paragraph-text-color;
+                margin-top: .5em;
+            }
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    .bar {
+        min-width: 1.5em !important;
+    }
+}

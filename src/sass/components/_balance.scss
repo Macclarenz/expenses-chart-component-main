@@ -1,0 +1,31 @@
+@use '../abstracts/'as abs;
+
+.balance-container {
+    @include abs.flex(space-between, center);
+    background-color: abs.$primary-color;
+    border-radius: .75em;
+    padding: 1em;
+
+    .balance-text-container {
+        color: abs.$background-and-text-color;
+
+        &>p:first-of-type {
+            font-size: 12px;
+            margin-top: .25em;
+
+        }
+
+        p:last-of-type {
+            line-height: 1.6;
+        }
+
+        p > strong {
+            font-size: 18px;
+        }
+    }
+
+    & > img {
+        max-width: 100%;
+        transform: scale(.75);
+    }
+}
